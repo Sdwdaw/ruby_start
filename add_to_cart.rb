@@ -6,4 +6,9 @@ ARGV.each do |a|
 end
 
 cart.read_from_file
-cart.save_to_file
+
+begin
+  cart.save_to_file
+rescue Cart::ItemNotSupported
+  puts "One of your items is virtual, virtual items do not support by cart yet"
+end
