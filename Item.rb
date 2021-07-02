@@ -44,6 +44,10 @@ class Item
     end
   end
 
+  def to_s
+    "#{self.name}:#{self.price}:#{self.weight}"
+  end
+
   private
   def tax
     type_tax = if self.class == VirtualItem
