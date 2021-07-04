@@ -1,12 +1,7 @@
-require_relative "string"
-require_relative "item_container"
-require_relative "Item"
-require_relative "virtual_item"
-require_relative "real_item"
-require_relative "antique_item"
-require_relative "cart"
-require_relative "order"
+require_relative "store_application"
 
+puts StoreApplication.new == StoreApplication.new
+p StoreApplication.new
 
 @items = []
 @items<<(AntiqueItem.new "car", price: 145, weight: 35)
