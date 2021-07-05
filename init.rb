@@ -27,3 +27,9 @@ cart = Cart.new("sdwdaw")
 cart.add_item RealItem.new({:price => 160, :weight => 75, :name => "car"})
 cart.add_item RealItem.new({:price => 120, :weight => 75, :name => "kettle"})
 cart.add_item RealItem.new({:price => 190, :weight => 75, :name => "car"})
+
+order = Order.new
+order.place
+puts order.placed_at.utc
+puts order.placed_at.strftime("%b %-d, %Y %H:%M:%S") # Jan 1, 1970 15;00;00
+puts order.time_spent_on_sending_email
