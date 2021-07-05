@@ -27,4 +27,8 @@ describe Item do
   it "returns info about an object" do
     expect(@item.to_s).to   eq("kettle:222.0")
   end
+
+  it "calculates spec" do
+    @item.send(:tax).should_not be_nil
+  end
 end

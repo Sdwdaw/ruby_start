@@ -1,6 +1,6 @@
 class Cart
 
-  attr_reader :items
+  attr_reader :items, :owner
   attr_writer :items
 
   include ItemContainer

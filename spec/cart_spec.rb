@@ -6,9 +6,15 @@ require_relative "../app/item_container"
 require_relative "../app/cart"
 
 describe Cart do
+
+  it "makes sure the cart is initialized correctly" do
+    cart = Cart.new("sdwdaw")
+    cart.items.should be_kind_of(Array)
+    cart.owner.should_not be_nil
+  end
   
   describe "managing items" do
-    
+
     it "adds items into thr cart" do
       cart = Cart.new("sdwdaw")
       item1 = Item.new("kettle", price: 200)
