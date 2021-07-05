@@ -6,7 +6,7 @@ StoreApplication.config do |app|
   app.environment = :development
 
   app.admin do |admin|
-    admin.email = "admin@mystore.com"
+    admin.email = "sergiyzhbanov@gmail.com"
     admin.login = "admin"
     admin.send_info_emails_on :mondays
   end
@@ -31,3 +31,7 @@ cart.add_item RealItem.new({:price => 190, :weight => 75, :name => "car"})
 
 method = "all_cars"
 p cart.send(method)
+
+order = Order.new
+@items.each { |i| order.add_item(i) }
+order.place
